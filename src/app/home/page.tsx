@@ -1,13 +1,19 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Myth } from ".";
 import ReversedCard from "@/components/cards/ReversedCard";
 import Nav from "@/components/Nav";
 import Button from "@/components/Button";
-import { Link } from "react-scroll";
 import { motion } from "framer-motion";
 import { h1Animation, h2Animation, pAnimation } from "@/components/Animations";
 
 export default function HomePage() {
+  const targetRef = useRef<HTMLDivElement>(null);
+
+  const handleScroll = () => {
+    if (targetRef.current) {
+      targetRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <div className="w-screen ">
       <Nav />
@@ -23,7 +29,6 @@ export default function HomePage() {
           alt=""
         />
         <div className="fixed right-0 top-0 flex flex-col md:flex-row w-full h-screen bg-black/70  ">
-          {/* <div className="absolute right-0 top-0 h-full w-screen bg-black/70 -z-10" /> */}
           <div className="w-[40vw] h-screen md:flex justify-center items-center p-20 relative hidden">
             <motion.div
               {...h2Animation}
@@ -57,15 +62,18 @@ export default function HomePage() {
                   heritage passed down through generations. Discover myths that
                   shaped the world we know today.
                 </motion.p>
-                <Link to="target" smooth={true} duration={500}>
-                  <Button title="Start now" className="md:w-[20vw] w-[60vw] " />
-                </Link>
+                <Button
+                  title="Start now"
+                  className="md:w-[20vw] w-[60vw] "
+                  onClick={handleScroll}
+                />
               </div>
             </div>
           </div>
         </div>
       </div>
       <div
+        ref={targetRef}
         id="target"
         className="flex justify-center items-center flex-wrap md:p-20 md:pt-32 pt-24 md:gap-y-36 gap-y-28 gap-x-24 bg-black absolute z-20 "
       >
