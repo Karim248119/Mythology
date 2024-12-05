@@ -1,3 +1,4 @@
+"use client";
 import React, { useRef } from "react";
 import { Myth } from ".";
 import ReversedCard from "@/components/cards/ReversedCard";
