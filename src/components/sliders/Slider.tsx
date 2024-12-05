@@ -5,7 +5,6 @@ import {
   slideNext,
   h1Animation,
   pAnimation,
-  buttonAnimation,
   slideOut,
   slidePrev,
 } from "../Animations";

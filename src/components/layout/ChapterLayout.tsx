@@ -10,7 +10,7 @@ import {
 } from "@/components/Animations";
 import Nav from "../Nav";
 import border from "../../../public/assets/imgs/greek3.png";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { Chapter } from "../../../types";
 
 export default function ChapterLayout({
@@ -20,7 +20,7 @@ export default function ChapterLayout({
 }: {
   children: React.ReactNode;
   chapter: Chapter;
-  icon: any;
+  icon: StaticImageData;
 }) {
   return (
     <div className="overflow-hidden">

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import CircularCursor from "@/components/CircularCursor ";
 
 const body = localFont({
   src: "./fonts/CinzelDecorative-Regular.ttf",
@@ -21,7 +22,7 @@ export default function RootLayout({
   return (
     <html>
       <body className={`${body.className} antialiased text-white bg-black `}>
-        {/* <CircularCursor /> */}
+        <CircularCursor />
         {children}
       </body>
     </html>

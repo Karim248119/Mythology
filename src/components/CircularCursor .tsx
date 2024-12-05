@@ -6,7 +6,7 @@ const CircularCursor = () => {
   const [mouseDown, setMousDown] = useState(false);
 
   useEffect(() => {
-    const handleMouseMove = (e: any) => {
+    const handleMouseMove = (e: MouseEvent) => {
       setPosition({ x: e.clientX, y: e.clientY });
     };
 

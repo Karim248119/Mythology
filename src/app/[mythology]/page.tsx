@@ -4,7 +4,7 @@ import { useMythData } from "@/hooks/useMythData";
 import { usePathname } from "next/navigation";
 import React from "react";
 
-export default function page() {
+export default function MyhologyPage() {
   const pathname = usePathname();
   const mythName = pathname.split("/").pop();
 

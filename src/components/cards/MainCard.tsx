@@ -10,10 +10,7 @@ export default function MainCard({ className }: { className?: string }) {
       />
       <div className="w-full h-full text-start px-10 rounded-tl-[100px] rounded-br-[100px] bg-black/30 z-10 center flex flex-col gap-3 justify-center">
         <h1 className="mt-10 text-2xl">Sumerian</h1>
-        <p className="text-sm text-white/70">
-          The world's oldest recorded mythology, featuring gods like Anu, Enlil,
-          and Inanna, and epic tales such as the Epic of Gilgamesh.
-        </p>
+        <p className="text-sm text-white/70"></p>
       </div>
       <div className="h-8 w-8 border absolute right-0 top-1/2 -translate-y-1/2 bg-primary flex justify-center items-center rotate-45 z-30">
         ↗

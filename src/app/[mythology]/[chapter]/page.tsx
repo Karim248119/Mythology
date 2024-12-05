@@ -13,7 +13,7 @@ const ChapterPage = () => {
   const mythName = pathSegments[0];
   const chapterName = pathSegments[1];
 
-  const { mythData, chapterData } = useMythData({
+  const { chapterData } = useMythData({
     mythName: mythName,
     chapterName: chapterName,
   });

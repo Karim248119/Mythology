@@ -35,7 +35,7 @@ export const useMythData = ({
       try {
         const data = await getAllMythologies(mythName, chapterName);
         setChapterData(data || null);
-      } catch (err) {
+      } catch (_err) {
         setError("Failed to fetch Greek mythology data.");
       } finally {
         setLoading(false);
