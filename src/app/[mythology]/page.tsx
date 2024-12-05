@@ -11,7 +11,6 @@ export default function MyhologyPage() {
   const { mythData } = useMythData({ mythName: mythName });
 
   const chapters = mythData?.chapters || [];
-  console.log("Chapters in page:", chapters); // Debugging
 
   return (
     <>

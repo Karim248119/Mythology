@@ -76,7 +76,7 @@ export default function HomePage() {
       <div
         ref={targetRef}
         id="target"
-        className="flex justify-center items-center flex-wrap md:p-20 md:pt-32 pt-24 md:gap-y-36 gap-y-28 gap-x-24 bg-black absolute z-20 "
+        className="flex justify-center items-center flex-wrap md:p-20 md:pt-32 pt-24 md:gap-y-36 gap-y-28 gap-x-24 bg-black absolute z-20 pb-5 md:pb-20"
       >
         {Myth.map((item, index) => (
           <ReversedCard key={index} myth={item} index={index} />

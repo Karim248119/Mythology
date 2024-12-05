@@ -138,7 +138,7 @@ export const Myth = [
     name: "Polynesian",
     description:
       "Tales from Polynesia, featuring gods like Maui and Tangaroa, and stories of creation and ocean voyages.",
-    img: "https://t4.ftcdn.net/jpg/08/94/33/21/360_F_894332116_b76le7WyudmaaACKHszdvCez2uqbqfz6.jpg",
+    img: "https://mythologyworldwide.com/wp-content/uploads/2024/10/mythologyworldwide.com-The-Guardians-of-the-Sea-Exploring-the-Lore-of-the-Polynesian-Tangaroa.webp",
     icon: polynesian,
   },
   {

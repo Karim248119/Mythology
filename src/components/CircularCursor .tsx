@@ -26,7 +26,7 @@ const CircularCursor = () => {
 
   return (
     <div
-      className="border-2 p-2"
+      className="border-2 p-2 hidden md: xl:block"
       style={{
         position: "fixed",
         top: 0,
