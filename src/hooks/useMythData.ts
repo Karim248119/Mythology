@@ -19,14 +19,12 @@ export const useMythData = ({
       try {
         const data = await getAllMythologies(mythName);
         setMythData(data || null);
-      } catch (err) {
-        setError("Failed to fetch Greek mythology data.");
+      } catch {
+        setError("Failed to fetch mythology data.");
       } finally {
         setLoading(false);
       }
     };
-    console.log("mythData:", chapterName);
-
     fetchData();
   }, [mythName]);
 
@@ -35,13 +33,12 @@ export const useMythData = ({
       try {
         const data = await getAllMythologies(mythName, chapterName);
         setChapterData(data || null);
-      } catch (_err) {
-        setError("Failed to fetch Greek mythology data.");
+      } catch {
+        setError("Failed to fetch chapter data.");
       } finally {
         setLoading(false);
       }
     };
-
     fetchData();
   }, [mythName, chapterName]);
 
