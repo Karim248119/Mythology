@@ -59,9 +59,9 @@ const Slider = ({
       <div className="text-white flex items-center justify-center h-screen"></div>
     );
   }
-  const icon: mythType | undefined = Myth.find(
-    (item) => item.name === mythName
-  );
+  const icon: mythType | undefined | null = mythName
+    ? Myth.find((item) => item.name === decodeURIComponent(mythName))
+    : null;
   return (
     <div className="relative h-screen overflow-hidden flex md:flex-row flex-col items-center justify-center bg-black">
       <Nav current={current} setCurrent={setCurrent} chapters={chapters} />
@@ -77,7 +77,7 @@ const Slider = ({
             >
               <img
                 src={chapters[current]?.img}
-                alt={chapters[current]?.name || "img"}
+                alt={chapters[current]?.name}
                 className={`w-full h-full object-cover ${
                   mythName === "Egyptian" || "Chinese"
                     ? "object-top"

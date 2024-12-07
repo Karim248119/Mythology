@@ -3,7 +3,7 @@ import { usePathname } from "next/navigation";
 import ChapterLayout from "@/components/layout/ChapterLayout";
 import Section from "@/components/layout/Section";
 import { useMythData } from "@/hooks/useMythData";
-import { Myth as MythType, Sec } from "../../../../types";
+import { Myth as mythType, Sec } from "../../../../types";
 import { Myth } from "@/app/home";
 
 const ChapterPage = () => {
@@ -17,9 +17,9 @@ const ChapterPage = () => {
     mythName: mythName,
     chapterName: chapterName,
   });
-  const icon: MythType | undefined = Myth?.find(
-    (item) => item.name === mythName
-  );
+  const icon: mythType | undefined | null = mythName
+    ? Myth.find((item) => item.name === decodeURIComponent(mythName))
+    : null;
   return (
     <>
       {chapterData && (
