@@ -15,7 +15,6 @@ import { Chapter, Myth as mythType } from "../../../types";
 import arrow from "../../../public/assets/icons/arrow.png";
 import Image from "next/image";
 import { Myth } from "@/app/home";
-import ImgEnhancer from "../ImgEnhancer";
 
 const Slider = ({
   chapters,
@@ -76,8 +75,9 @@ const Slider = ({
               className={`absolute w-full h-full `}
               {...(isNext ? slideNext : slidePrev)}
             >
-              <ImgEnhancer
+              <img
                 src={chapters[current]?.img}
+                alt={chapters[current]?.name || "img"}
                 className={`w-full h-full object-cover ${
                   mythName === "Egyptian" || "Chinese"
                     ? "object-top"
