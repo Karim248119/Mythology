@@ -15,6 +15,7 @@ import { Chapter, Myth as mythType } from "../../../types";
 import arrow from "../../../public/assets/icons/arrow.png";
 import Image from "next/image";
 import { Myth } from "@/app/home";
+import ImgEnhancer from "../ImgEnhancer";
 
 const Slider = ({
   chapters,
@@ -72,16 +73,18 @@ const Slider = ({
           <AnimatePresence>
             <motion.div
               key={current}
-              className={`absolute w-full h-full bg-cover ${
-                mythName === "Egyptian" || "Chinese" ? "bg-top" : "bg-bottom"
-              }`}
-              style={{
-                backgroundImage: `url(${
-                  chapters[current]?.img || "https://via.placeholder.com/600"
-                })`,
-              }}
+              className={`absolute w-full h-full `}
               {...(isNext ? slideNext : slidePrev)}
-            />
+            >
+              <ImgEnhancer
+                src={chapters[current]?.img}
+                className={`w-full h-full object-cover ${
+                  mythName === "Egyptian" || "Chinese"
+                    ? "object-top"
+                    : "object-bottom"
+                }`}
+              />
+            </motion.div>
           </AnimatePresence>
           <motion.div
             className="absolute z-50 md:w-[50vw] w-full md:h-full h-[50vh] bg-primary"
