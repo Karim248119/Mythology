@@ -39,7 +39,7 @@ export const Myth = [
     name: "Mesopotamian",
     description:
       "The rich mythology of Babylon, featuring gods like Marduk and Tiamat, and stories like the Enuma Elish.",
-    img: "https://i.pinimg.com/736x/60/34/1d/60341d117d8b61b6d72e109571e72dc1.jpg",
+    img: "https://mythlok.b-cdn.net/wp-content/uploads/2023/01/Shamash_.jpg",
     icon: mesopotamian,
   },
   {
